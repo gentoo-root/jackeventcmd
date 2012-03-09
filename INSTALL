@@ -1,0 +1,8 @@
+To install jackeventcmd run:
+
+$ make
+# make install
+
+To uninstall jackeventcmd run:
+
+# make uninstall

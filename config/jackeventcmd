@@ -1,0 +1,23 @@
+# Jack Event Handler sample config
+#
+# Each line describes one event
+# One event may be handled by one or more commands
+# Some events may be unhandled
+#
+# Examples here:
+#
+headphone inserted:notify-send -i audio-headset 'Headphones plugged in'
+headphone removed:notify-send -i audio-headset 'Headphones plugged out'
+microphone inserted:notify-send -i audio-headset 'Microphone plugged in'
+microphone removed:notify-send -i audio-headset 'Microphone plugged out'
+lineout inserted:notify-send -i audio-headset 'Line out plugged in'
+lineout removed:notify-send -i audio-headset 'Line in plugged out'
+videoout inserted:notify-send -i audio-headset 'Video out plugged in'
+videoout removed:notify-send -i audio-headset 'Video out plugged out'
+linein inserted:notify-send -i audio-headset 'Line in plugged in'
+linein removed:notify-send -i audio-headset 'Line in plugged out'
+unknown inserted:notify-send -i audio-headset 'Unknown plugged in'
+unknown removed:notify-send -i audio-headset 'Unknown plugged out'
+#
+headphone removed:qdbus org.mpris.MediaPlayer2.rhythmbox /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Pause
+#headphone inserted:qdbus org.mpris.MediaPlayer2.rhythmbox /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Play

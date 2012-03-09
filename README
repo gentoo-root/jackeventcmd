@@ -1,0 +1,28 @@
+What is it?
+===============
+Jack Event Handler is a daemon that runs custom commands when headphones are plugged/unplugged.
+
+How to use it:
+===============
+Add /usr/bin/jackeventcmd to your desktop environment autostart. Edit config file ~/.config/jackeventcmd. Sample config can be found in /usr/share/config/jackeventcmd.
+
+How to compile:
+===============
+$ make
+# make install
+
+If you are on Gentoo, you should use ebuild. It is located in directory 'gentoo'.
+If you are on Archlinux, you should use PKGBUILD. It is located in directory 'arch'.
+
+How to uninstall:
+===============
+# make uninstall
+
+Dependencies:
+===============
+- DBus
+- jacklistener
+
+Please report bugs to: https://github.com/gentoo-root/jackeventcmd/issues, registration is needed.
+
+Maxim A. Mikityanskiy

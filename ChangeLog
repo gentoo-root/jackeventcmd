@@ -1,0 +1,5 @@
+jackeventcmd changelog:
+
+09/03/12 - 0.1:
+		- Initial release. Jack Event Handler runs custom commands on
+		jack plugging/unplugging events.
