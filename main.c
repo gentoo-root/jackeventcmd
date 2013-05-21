@@ -19,6 +19,7 @@
 #include "dbus.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <signal.h>
 #include "run.h"
 
 int main(int argc, char *argv[])

@@ -106,16 +106,12 @@ int read_config()
 
 void run_cmds(int num)
 {
-	struct list_item_t *p;
-	switch (fork()) {
-	case -1:
-		return;
-	case 0:
-		p = head[num];
-		while (p) {
-			printf("Running \"%s\"\n", p->command);
-			if (system(p->command)) ;
-			p = p->next;
+	struct list_item_t *p = head[num];
+	for (; p; p = p->next) {
+		printf("Running \"%s\"\n", p->command);
+		if (!fork()) {
+			execl("/bin/sh", "/bin/sh", "-c", p->command, NULL);
+			exit(1); /* in case of error */
 		}
 	}
 }
