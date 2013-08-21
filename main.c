@@ -32,6 +32,7 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Unable to read config\n");
 		exit(16);
 	}
+	signal(SIGCHLD, SIG_IGN);
 	if (!je_dbus_init()) {
 		fprintf(stderr, "Unable to initialize D-Bus\n");
 		exit(1);
